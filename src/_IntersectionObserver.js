@@ -140,11 +140,6 @@ export default class IntersectionObserver {
             throw new TypeError("parameter 2 is not an object.");
         }
 
-        if ('root' in options && !(options.root instanceof Element)) {
-            throw new TypeError("member root is not of type Element.");
-        }
-
-
         const thresholds = parseThresholds(options.threshold);
         const rootMargin = parseMargins(options.rootMargin);
 
